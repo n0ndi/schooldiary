@@ -65,9 +65,13 @@ from datacenter.modules import *
 
 
 `get_schoolkid(full_name)` - Получает обьект ученика, full_name - ФИО
+
 `remove_chastisement(schoolkid)` - Удаляет замечание ученика, schoolkid - Обьект ученика
+
 `fix_marks(schoolkid)` - Удаляет все 2 и 3,  schoolkid - Обьект ученика
+
 `create_commendation(schoolkid, subject)` - Создаёт похвалу от учителя, schoolkid - Обьект ученика, Subject - названик предмета
+
 
 Для получения обьекта ученика, используйте:
 
