@@ -70,7 +70,11 @@ from datacenter.modules import *
 
 `fix_marks(schoolkid)` - Удаляет все 2 и 3,  schoolkid - Обьект ученика
 
-`create_commendation(schoolkid, subject)` - Создаёт похвалу от учителя, schoolkid - Обьект ученика, Subject - названик предмета
+`create_commendation(schoolkid, subject)` - Создаёт похвалу от учителя, schoolkid - Обьект ученика, Subject - названик предмета.  Перед использвонием этого скрипта обьявите переменную:
+
+```
+COMMENDATION_PHRASES = ["Молодец!", "Отлично!", "Хорошо!", "Гораздо лучшечем я ожидал!", "Ты меня приятно удивил!"]
+```
 
 
 Для получения обьекта ученика, используйте:
