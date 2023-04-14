@@ -1,5 +1,3 @@
-import logging
-
 
 COMMENDATION_PHRASES = ["Молодец!", "Отлично!", "Хорошо!", "Гораздо лучшечем я ожидал!", "Ты меня приятно удивил!"]
 
@@ -18,9 +16,9 @@ def get_schoolkid(full_name):
     try:
         schoolkid = Schoolkid.objects.get(full_name__contains=full_name)
         return schoolkid
-    except Model.MultipleObjectsReturned:
+    except Schoolkid.MultipleObjectsReturned:
         print("Уточните ФИО")
-    except Model.DoesNotExist:
+    except Schoolkid.DoesNotExist:
         print("Такого ученика не существует")
 
 
@@ -29,7 +27,7 @@ def create_commendation(schoolkid, subject):
     group_letter = schoolkid.group_letter
     try:
         subject = Subject.objects.get_object_or_404(title__contains=subject, year_of_study=year_of_study)
-    except Model.MultipleObjectsReturned:
+    except Subject.MultipleObjectsReturned:
         print("Уточните урок")
         return None
     lessons = Lesson.objects.filter(year_of_study=year_of_study,group_letter=group_letter, subject=subject)
